@@ -1,0 +1,486 @@
+[
+    {
+        "name": "lw/typo3cms-installers",
+        "version": "1.0.4",
+        "version_normalized": "1.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lightwerk/typo3cms-installers.git",
+            "reference": "53bd70e206349e744e1a3fae407464bd00358e48"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lightwerk/typo3cms-installers/zipball/53bd70e206349e744e1a3fae407464bd00358e48",
+            "reference": "53bd70e206349e744e1a3fae407464bd00358e48",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "1.0.0",
+            "composer/installers": "*"
+        },
+        "time": "2014-02-21 14:20:55",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Lw\\TYPO3CMSInstallers\\TYPO3CMSInstallerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Felix Oertel",
+                "email": "fo@lightwerk.com",
+                "homepage": "https://github.com/lightwerk"
+            }
+        ],
+        "description": "A TYPO3 CMS Composer installer",
+        "homepage": "https://github.com/lightwerk/typo3cms-installers",
+        "keywords": [
+            "cms",
+            "installer",
+            "typo3"
+        ],
+        "support": {
+            "source": "https://github.com/lightwerk/typo3cms-installers/tree/1.0.4",
+            "issues": "https://github.com/lightwerk/typo3cms-installers/issues"
+        }
+    },
+    {
+        "name": "typo3-ter/realurl",
+        "version": "1.12.8",
+        "version_normalized": "1.12.8.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/realurl/1.12.8/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Dmitry Dulepov",
+                "role": "Developer"
+            }
+        ],
+        "description": "Creates nice looking URLs for TYPO3 pages: converts http://example.com/index.phpid12345&L2 to http://example.com/path/to/your/page/. Please, ask for free support in TYPO3 mailing lists or contact the maintainer for paid support."
+    },
+    {
+        "name": "typo3-ter/vhs",
+        "version": "1.9.1",
+        "version_normalized": "1.9.1.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/vhs/1.9.1/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "FluidTYPO3 Team",
+                "role": "Developer"
+            }
+        ],
+        "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors"
+    },
+    {
+        "name": "typo3-ter/flux",
+        "version": "7.1.2",
+        "version_normalized": "7.1.2.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/flux/7.1.2/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "FluidTYPO3 Team",
+                "role": "Developer"
+            }
+        ],
+        "description": "Backend form and frontend content rendering assistance API with focus on productivity."
+    },
+    {
+        "name": "typo3-ter/fluidpages",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/fluidpages/3.0.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*",
+            "typo3-ter/flux": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "FluidTYPO3 Team",
+                "role": "Developer"
+            }
+        ],
+        "description": "Fluid Page Template engine - integrates compact and highly dynamic page templates with all the benefits of Fluid."
+    },
+    {
+        "name": "typo3-ter/fluidcontent",
+        "version": "4.0.0",
+        "version_normalized": "4.0.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/fluidcontent/4.0.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*",
+            "typo3-ter/flux": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "FluidTYPO3 Team",
+                "role": "Developer"
+            }
+        ],
+        "description": "Fluid Content Element engine - integrates extremely compact and highly dynamic content element templates written in Fluid. See: https://github.com/FluidTYPO3/fluidcontent"
+    },
+    {
+        "name": "typo3-ter/extension_builder",
+        "version": "6.2.0",
+        "version_normalized": "6.2.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/extension_builder/6.2.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Nico de Haen",
+                "role": "Developer"
+            }
+        ],
+        "description": "The Extension Builder helps you build and manage your Extbase based TYPO3 extensions."
+    },
+    {
+        "name": "typo3/cms",
+        "version": "6.2.9",
+        "version_normalized": "6.2.9.0",
+        "dist": {
+            "type": "zip",
+            "url": "http://get.typo3.org/6.2.9/zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "provide": {
+            "typo3-ter/about": "6.2.0",
+            "typo3-ter/aboutmodules": "6.2.0",
+            "typo3-ter/adodb": "6.2.0",
+            "typo3-ter/backend": "6.2.0",
+            "typo3-ter/belog": "6.2.0",
+            "typo3-ter/beuser": "6.2.0",
+            "typo3-ter/cms": "6.2.0",
+            "typo3-ter/context_help": "6.2.0",
+            "typo3-ter/core": "6.2.0",
+            "typo3-ter/cshmanual": "6.2.0",
+            "typo3-ter/css_styled_content": "6.2.0",
+            "typo3-ter/dbal": "6.2.0",
+            "typo3-ter/documentation": "6.2.0",
+            "typo3-ter/extbase": "6.2.0",
+            "typo3-ter/extensionmanager": "6.2.0",
+            "typo3-ter/extra_page_cm_options": "6.2.0",
+            "typo3-ter/feedit": "6.2.0",
+            "typo3-ter/felogin": "6.2.0",
+            "typo3-ter/filelist": "6.2.0",
+            "typo3-ter/fluid": "6.2.0",
+            "typo3-ter/form": "6.2.0",
+            "typo3-ter/frontend": "6.2.0",
+            "typo3-ter/func": "6.2.0",
+            "typo3-ter/func_wizards": "6.2.0",
+            "typo3-ter/impexp": "6.2.0",
+            "typo3-ter/indexed_search": "6.2.0",
+            "typo3-ter/indexed_search_mysql": "6.2.0",
+            "typo3-ter/info": "6.2.0",
+            "typo3-ter/info_pagetsconfig": "6.2.0",
+            "typo3-ter/install": "6.2.0",
+            "typo3-ter/lang": "6.2.0",
+            "typo3-ter/linkvalidator": "6.2.0",
+            "typo3-ter/lowlevel": "6.2.0",
+            "typo3-ter/opendocs": "6.2.0",
+            "typo3-ter/openid": "6.2.0",
+            "typo3-ter/perm": "6.2.0",
+            "typo3-ter/recordlist": "6.2.0",
+            "typo3-ter/recycler": "6.2.0",
+            "typo3-ter/reports": "6.2.0",
+            "typo3-ter/rsaauth": "6.2.0",
+            "typo3-ter/rtehtmlarea": "6.2.0",
+            "typo3-ter/saltedpasswords": "6.2.0",
+            "typo3-ter/scheduler": "6.2.0",
+            "typo3-ter/setup": "6.2.0",
+            "typo3-ter/sv": "6.2.0",
+            "typo3-ter/sys_action": "6.2.0",
+            "typo3-ter/sys_note": "6.2.0",
+            "typo3-ter/t3editor": "6.2.0",
+            "typo3-ter/t3skin": "6.2.0",
+            "typo3-ter/taskcenter": "6.2.0",
+            "typo3-ter/tstemplate": "6.2.0",
+            "typo3-ter/version": "6.2.0",
+            "typo3-ter/viewpage": "6.2.0",
+            "typo3-ter/wizard_crpages": "6.2.0",
+            "typo3-ter/wizard_sortpages": "6.2.0",
+            "typo3-ter/workspaces": "6.2.0"
+        },
+        "type": "typo3cms-core",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "TYPO3 Core Team",
+                "Role": "Developer"
+            }
+        ],
+        "description": "TYPO3 is an enterprise class Web CMS written in PHP/MySQL."
+    },
+    {
+        "name": "typo3-ter/gridelements",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/gridelements/3.0.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Grid Elements Team",
+                "role": "Developer"
+            }
+        ],
+        "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements.\r\nIt offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend."
+    },
+    {
+        "name": "typo3-ter/version",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/version/1.0.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Kasper Skaarhoj",
+                "role": "Developer"
+            }
+        ],
+        "description": "Backend Interface for management of the versioning API."
+    },
+    {
+        "name": "composer/installers",
+        "version": "v1.0.20",
+        "version_normalized": "1.0.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/installers.git",
+            "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+            "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+            "shasum": ""
+        },
+        "replace": {
+            "roundcube/plugin-installer": "*",
+            "shama/baton": "*"
+        },
+        "require-dev": {
+            "composer/composer": "1.0.*@dev",
+            "phpunit/phpunit": "4.1.*"
+        },
+        "time": "2015-01-11 03:51:11",
+        "type": "composer-installer",
+        "extra": {
+            "class": "Composer\\Installers\\Installer",
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Composer\\Installers\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }
+        ],
+        "description": "A multi-framework Composer library installer",
+        "homepage": "http://composer.github.com/installers/",
+        "keywords": [
+            "Craft",
+            "Dolibarr",
+            "Hurad",
+            "MODX Evo",
+            "OXID",
+            "SMF",
+            "Thelia",
+            "WolfCMS",
+            "agl",
+            "annotatecms",
+            "bitrix",
+            "cakephp",
+            "chef",
+            "codeigniter",
+            "concrete5",
+            "croogo",
+            "dokuwiki",
+            "drupal",
+            "elgg",
+            "fuelphp",
+            "grav",
+            "installer",
+            "joomla",
+            "kohana",
+            "laravel",
+            "lithium",
+            "magento",
+            "mako",
+            "mediawiki",
+            "modulework",
+            "moodle",
+            "phpbb",
+            "piwik",
+            "ppi",
+            "puppet",
+            "roundcube",
+            "shopware",
+            "silverstripe",
+            "symfony",
+            "typo3",
+            "wordpress",
+            "zend",
+            "zikula"
+        ]
+    },
+    {
+        "name": "typo3-ter/formhandler",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/formhandler/2.0.1/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Dev-Team Typoheads",
+                "role": "Developer"
+            }
+        ],
+        "description": "The swiss army knife for all kinds of mailforms, completely new written using the MVC concept. Result: Flexibility, Flexibility, Flexibility  :-)."
+    },
+    {
+        "name": "typo3-ter/news",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/news/3.0.1/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Georg Ringer",
+                "role": "Developer"
+            }
+        ],
+        "description": "Versatile news extension, based on extbase & fluid. Editor friendly, default integration of social sharing and many other features"
+    },
+    {
+        "name": "typo3-ter/crawler",
+        "version": "3.5.0",
+        "version_normalized": "3.5.0.0",
+        "dist": {
+            "type": "t3x",
+            "url": "http://typo3.org/extensions/repository/download/crawler/3.5.0/t3x/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "lw/typo3cms-installers": "*"
+        },
+        "type": "typo3cms-extension",
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Kasper Skaarhoj, Daniel Poetzinger, Fabrizio Branca, Tolleiv Nietsch, Timo Schmidt, Michael Klapper",
+                "role": "Developer"
+            }
+        ],
+        "description": "Libraries and scripts for crawling the TYPO3 page tree. Used for re-caching, re-indexing, publishing applications etc."
+    }
+]
