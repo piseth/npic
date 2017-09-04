@@ -1,0 +1,26 @@
+{
+	"name": "npic/website",
+	"description" : "TYPO3 CMS for NPIC.",
+	"license": "GPL-3.0+",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://composer.lightwerk.com/"
+		}
+	],
+	"require": {
+		"typo3/cms": "~6.2",
+		"typo3-ter/realurl": "1.12.8",
+		"typo3-ter/vhs": "1.9.1",
+		"typo3-ter/fluidpages": "3.0.0",
+		"typo3-ter/fluidcontent": "4.0.0",
+                "typo3-ter/gridelements": "3.0.0",
+                "typo3-ter/version": "1.0.0",
+                "typo3-ter/formhandler": "2.0.1",
+                "typo3-ter/news": "3.0.1",
+                "typo3-ter/crawler": "3.5.0"
+	},
+	"require-dev": {
+		"typo3-ter/extension_builder": "6.2.0"
+	}
+}
