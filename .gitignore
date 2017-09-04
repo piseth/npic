@@ -22,3 +22,15 @@
 # Ignore temp directory.
 /typo3temp/*
 !/typo3temp/.keep
+
+/mechanic/
+/rnd.npic.edu.kh/
+/typo3.zip
+/typo3_alumni.zip
+/typo3_backup_04_09_2017.zip
+/typo3_fileadmin.zip
+/typo3_mechanic.zip
+/typo3_npic.zip
+/typo3_rnd.npic.edu.kh.zip
+/typo3_src-6.2.6.zip
+/index.html
