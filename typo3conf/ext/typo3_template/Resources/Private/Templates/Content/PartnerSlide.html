@@ -1,0 +1,49 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="partner" icon="{v:extension.path.resources(path: 'Icons/icon-carousel.gif')}">
+        <flux:field.checkbox name="settings.isSlide" default="1" />
+        <flux:form.section name="elements">
+            <flux:form.object name="image">
+                <flux:field.input name="title" label="Title for alternative" />
+                <flux:field.file name="iconImage" label="Image for  Partner" />
+            </flux:form.object>
+        </flux:form.section>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <p>Partner Slideshow</p>
+	<p>Elements: {elements -> f:count()}</p>
+</f:section>
+
+
+<f:section name="Main">
+    <f:if condition="{settings.isSlide}">
+        <f:then>
+            <div class="center">
+                <div class="owl-carousel" data-plugin-options='{"items": 12, "singleItem": false, "autoPlay": true}'>
+                    <f:for each="{elements}" as="element" iteration="iteration">
+                        <div>
+                            <img class="img-responsive" src="{element.image.iconImage}" alt="{element.image.title}">
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="center">
+                <f:for each="{elements}" as="element" iteration="iteration">
+                    <img class="partner img-responsive" src="{element.image.iconImage}" alt="{element.image.title}">
+                </f:for>
+            </div>
+        </f:else>
+    </f:if>
+</f:section>
+</div>

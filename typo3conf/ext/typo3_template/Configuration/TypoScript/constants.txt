@@ -1,0 +1,143 @@
+# Include TS constant for css_styled_content system extension
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:css_styled_content/static/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:fluidpages/Configuration/TypoScript/constants.txt">
+
+# Include Extension
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:news/Configuration/TypoScript/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:sr_freecap/Configuration/TypoScript/constants.txt">
+
+# General variables
+npic.address = Phum Prey Popel, SK. Somrong Krom, Khan Po Sen Chey, Phnom Penh (Near Wat Pun Phnom)
+npic.general.phone1 = +855-23-961-5193
+npic.general.phone2 = +855-10-970-351
+npic.general.phone3 = +855-12-381-246
+npic.general.phone4 = +855-11-769-003
+npic.general.email = npicinfo@gmail.com
+
+npic.contact.it = +855-17-855-576, +855-12-491-623, +855-16-507-341
+npic.contact.mechanical = +855-16-766-311
+npic.contact.tourism = +855-96-995-9585
+npic.contact.electrical = +855-96-2012-665, +855-97-450-3024
+npic.contact.electronic = +855-(12/10)-563-553
+npic.contact.civil.engineering = +855-17-362-886, +855-16-385-532
+npic.contact.english.literacy = +855-95-358-885
+npic.contact.air.conditioner = +855-17-907-710
+npic.contact.dormitory = +855-86-549-950
+
+
+
+# contact form configuration
+formhandlerExamples.basic.contact-form {
+
+	# cat=Formhandler Examples - Basic - Contact Form/basic/10; type=string; label=Root path: Path where the example was saved to.
+	rootPath = EXT:typo3_template/Resources/Private/Templates/contact-form
+	email {
+
+		user {
+
+			# cat=Formhandler Examples - Basic - Contact Form/basic/20; type=string; label=User email sender: Email address to use as sender address for the user email.
+			sender_email = npicinfo@gmail.com
+
+		}
+
+		admin {
+
+			# cat=Formhandler Examples - Basic - Contact Form/basic/20; type=string; label=Admin email sender: Email address to use as sender address for the admin email.
+			sender_email = npicinfo@gmail.com
+
+			# cat=Formhandler Examples - Basic - Contact Form/basic/20; type=string; label=Admin email recipient: Email address of an admin to receive the contact request.
+			to_email = npicinfo@gmail.com
+		}
+	}
+
+	# cat=Formhandler Examples - Basic - Contact Form/basic/40; type=string; label=Redirect Page: Page ID to redirect after successful form submission.
+	redirectPage = 
+	includeFoundationCSS = 1
+}
+
+# news configuration
+plugin.tx_news {
+    view {
+       templateRootPath = EXT:typo3_template/Resources/Private/Templates/News/Templates/
+       partialRootPath = EXT:typo3_template/Resources/Private/Templates/News/Partials/
+       layoutRootPath = EXT:typo3_template/Resources/Private/Templates/News/Layouts/
+   }
+	settings {
+		cssFile = 
+	}
+}
+
+# condition for multi domain
+# condition for multi domain
+NPIC.baseURL = http://www.local.npic.edu.kh/
+
+[globalVar = IENV:HTTP_HOST = local.npic.edu.kh]
+  NPIC.baseURL = http://local.npic.edu.kh/
+[globalVar = IENV:HTTP_HOST = www.local.cs.npic.edu.kh]
+  NPIC.baseURL = http://www.local.cs.npic.edu.kh/
+[globalVar = IENV:HTTP_HOST = local.cs.npic.edu.kh]
+  NPIC.baseURL = http://local.cs.npic.edu.kh/
+
+[globalVar = IENV:HTTP_HOST = www.npic.edu.kh]
+  NPIC.baseURL = http://www.npic.edu.kh/
+  contentpage.footerPID = 17
+[globalVar = IENV:HTTP_HOST = npic.edu.kh]
+  NPIC.baseURL = http://npic.edu.kh/
+  contentpage.footerPID = 17
+  
+# faculty of computer science
+[globalVar = IENV:HTTP_HOST = www.cs.npic.edu.kh]
+  NPIC.baseURL = http://www.cs.npic.edu.kh/
+  contentpage.footerPID = 72
+[globalVar = IENV:HTTP_HOST = cs.npic.edu.kh]
+  NPIC.baseURL = http://cs.npic.edu.kh/
+  contentpage.footerPID = 72
+
+# faculty of civil engineering
+[globalVar = IENV:HTTP_HOST = www.civil.npic.edu.kh]
+  NPIC.baseURL = http://www.civil.npic.edu.kh/
+  contentpage.footerPID = 95
+[globalVar = IENV:HTTP_HOST = civil.npic.edu.kh]
+  NPIC.baseURL = http://civil.npic.edu.kh/
+  contentpage.footerPID = 95
+
+# faculty of electrical engineering
+[globalVar = IENV:HTTP_HOST = www.electrical.npic.edu.kh]
+  NPIC.baseURL = http://www.electrical.npic.edu.kh/
+  contentpage.footerPID = 103
+[globalVar = IENV:HTTP_HOST = electrical.npic.edu.kh]
+  NPIC.baseURL = http://electrical.npic.edu.kh/
+  contentpage.footerPID = 103
+
+# faculty of foundation
+[globalVar = IENV:HTTP_HOST = www.foundation.npic.edu.kh]
+  NPIC.baseURL = http://www.foundation.npic.edu.kh/
+  contentpage.footerPID = 100
+[globalVar = IENV:HTTP_HOST = foundation.npic.edu.kh]
+  NPIC.baseURL = http://foundation.npic.edu.kh/
+  contentpage.footerPID = 100
+
+# faculty of electronic engineering
+[globalVar = IENV:HTTP_HOST = www.electronic.npic.edu.kh]
+  NPIC.baseURL = http://www.electronic.npic.edu.kh/
+  contentpage.footerPID = 97
+[globalVar = IENV:HTTP_HOST = electronic.npic.edu.kh]
+  NPIC.baseURL = http://electronic.npic.edu.kh/
+  contentpage.footerPID = 97
+
+# faculty of tour
+[globalVar = IENV:HTTP_HOST = www.tour.npic.edu.kh]
+  NPIC.baseURL = http://www.tour.npic.edu.kh/
+  contentpage.footerPID = 83
+[globalVar = IENV:HTTP_HOST = tour.npic.edu.kh]
+  NPIC.baseURL = http://tour.npic.edu.kh/
+  contentpage.footerPID = 83
+
+# faculty of mechanic
+[globalVar = IENV:HTTP_HOST = www.mechanic.npic.edu.kh]
+  NPIC.baseURL = http://www.mechanic.npic.edu.kh/
+  contentpage.footerPID = 78
+[globalVar = IENV:HTTP_HOST = mechanic.npic.edu.kh]
+  NPIC.baseURL = http://mechanic.npic.edu.kh/
+  contentpage.footerPID = 78
+[end]

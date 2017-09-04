@@ -1,0 +1,20 @@
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:news/Configuration/TypoScript/setup.txt">
+plugin.tx_news {
+    settings {
+        cropMaxCharacters = 350
+        fileFolder = fileadmin
+        relatedFiles {
+            fileSizeLabels = ' | K| M| G'
+        }
+        list {
+            paginate {
+                itemsPerPage = 3
+                insertAbove = 0
+                insertBelow = 1
+                templatePath =
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+            }
+        }
+    }
+}

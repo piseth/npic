@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-07-23T08:45:17Z" product-name="typo3_template">
+		<header/>
+		<body>
+                    <trans-unit id="flux.carousel" xml:space="preserve">
+                            <source>Bootstrap: Element Carousel</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.quickselect" xml:space="preserve">
+                            <source>Display circle icons for direct selection of slides, default top right corner</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.quickselectType" xml:space="preserve">
+                            <source>Choose navigation display type</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.interval" xml:space="preserve">
+                            <source>Interval between image changes, in miliseconds (default: 5000)</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.id" xml:space="preserve">
+                            <source>DOM element ID (override not necessary but possible)</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.labelNext" xml:space="preserve">
+                            <source>Label: next (empty will display default arrow)</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.labelPrev" xml:space="preserve">
+                            <source>Label: previous (empty will display default arrow)</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.width" xml:space="preserve">
+                            <source>Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.sheets.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.sections.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.text" xml:space="preserve">
+                            <source>Text</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.text.title" xml:space="preserve">
+                            <source>Header</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.text.size" xml:space="preserve">
+                            <source>Text size</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.text.text" xml:space="preserve">
+                            <source>Text</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.content" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.content.id" xml:space="preserve">
+                            <source>Content area ID</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.image" xml:space="preserve">
+                            <source>Image</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.objects.image.file" xml:space="preserve">
+                            <source>Image file</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.sheets.styles" xml:space="preserve">
+                            <source>Styles</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.void" xml:space="preserve">
+                            <source> </source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.autostart" xml:space="preserve">
+                            <source>Should the carousel start sliding on page-load?</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.quickselectStyles" xml:space="preserve">
+                            <source>Optional CSS rule for the quick slide selector dots container</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.quickselectDotStyles" xml:space="preserve">
+                            <source>Optional CSS rule for the quick slide selector dots</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.navigationStyles" xml:space="preserve">
+                            <source>Optional CSS rule for the navigation dots</source>
+                    </trans-unit>
+                    <trans-unit id="flux.carousel.fields.settings.carousel.innerStyles" xml:space="preserve">
+                            <source>CSS rule for inside of carousel</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature" xml:space="preserve">
+                            <source>Feature List</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.fields.settings.feature.id" xml:space="preserve">
+                            <source>ID of element</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.sheets.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                     <trans-unit id="flux.feature.sections.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.objects.text" xml:space="preserve">
+                            <source>Text</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.objects.text.title" xml:space="preserve">
+                            <source>Title</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.objects.text.target" xml:space="preserve">
+                            <source>Target</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.objects.text.icon" xml:space="preserve">
+                            <source>Icon Source: http://preview.oklerthemes.com/porto/3.5.0/feature-icons.html</source>
+                    </trans-unit>
+                    <trans-unit id="flux.feature.objects.text.text" xml:space="preserve">
+                            <source>Content</source>
+                    </trans-unit>
+                    
+                    <trans-unit id="flux.accordion" xml:space="preserve">
+                            <source>Accordion</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.fields.settings.feature.id" xml:space="preserve">
+                            <source>ID of element</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.sheets.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                     <trans-unit id="flux.accordion.sections.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.objects.text" xml:space="preserve">
+                            <source>Text</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.objects.text.title" xml:space="preserve">
+                            <source>Title</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.objects.text.icon" xml:space="preserve">
+                            <source>Icon Source: http://preview.oklerthemes.com/porto/3.5.0/feature-icons.html</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.objects.text.text" xml:space="preserve">
+                            <source>Content</source>
+                    </trans-unit>
+                    <trans-unit id="flux.accordion.objects.text.active" xml:space="preserve">
+                            <source>Active</source>
+                    </trans-unit>
+                    
+                    <trans-unit id="flux.map" xml:space="preserve">
+                            <source>Single map</source>
+                    </trans-unit>
+                    <trans-unit id="flux.map.fields.settings.map.id" xml:space="preserve">
+                            <source>ID of map</source>
+                    </trans-unit>
+                    <trans-unit id="flux.map.fields.latitude" xml:space="preserve">
+                            <source>Latitude</source>
+                    </trans-unit>
+                    <trans-unit id="flux.map.fields.longitude" xml:space="preserve">
+                            <source>Longitude</source>
+                    </trans-unit>
+                    <trans-unit id="flux.map.fields.title" xml:space="preserve">
+                            <source>Title</source>
+                    </trans-unit>
+                    <trans-unit id="flux.map.fields.content" xml:space="preserve">
+                            <source>Content</source>
+                    </trans-unit>
+                    <trans-unit id="paginate_previous" xml:space="preserve">
+                            <source>«</source>
+                    </trans-unit>
+                    <trans-unit id="paginate_next" xml:space="preserve">
+                            <source>»</source>
+                    </trans-unit>
+                    
+                    <trans-unit id="flux.partner" xml:space="preserve">
+                            <source>Our Partner</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.fields.settings.isSlide" xml:space="preserve">
+                            <source>Is Slide</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.fields.settings.isSlide" xml:space="preserve">
+                            <source>Is Slide</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.fields.settings.isSlide" xml:space="preserve">
+                            <source>Is Slide</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.sections.elements" xml:space="preserve">
+                            <source>Content elements</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.objects.image" xml:space="preserve">
+                            <source>Image</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.objects.image.title" xml:space="preserve">
+                            <source>Title</source>
+                    </trans-unit>
+                    <trans-unit id="flux.partner.objects.image.icon" xml:space="preserve">
+                            <source>Partner Logo</source>
+                    </trans-unit>
+		</body>
+	</file>
+</xliff>

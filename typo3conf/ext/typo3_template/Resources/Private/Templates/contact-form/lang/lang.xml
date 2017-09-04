@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for Contact Form</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label_fieldset">Contact Form</label>
+			<label index="name">Name</label>
+			<label index="email">E-Mail</label>
+                        <label index="subject">Subject</label>
+			<label index="message">Your Message</label>
+			<label index="receive-copy">I want to receive a copy of this request</label>
+			<label index="submit">Send Message</label>
+	
+			<label index="greetings">Dear</label>
+			<label index="email_user_subject">Your contact request</label>
+			<label index="email_user_text">We have received your request via the contact form on www.npic.edu.kh. We will process your request and get in contact with you soon.</label>
+			<label index="email_user_footer">National Polytechnic Institute of Cambodia</label>
+
+			<label index="email_admin_subject">Contact NPIC</label>
+			<label index="email_admin_text">A user filled out the contact form on www.npic.edu.kh.</label>
+			<label index="email_admin_footer">National Polytechnic Institute of Cambodia</label>
+
+			<label index="error_name_required">Please enter your name!</label>
+			<label index="error_email_required">Please enter your email address!</label>
+			<label index="error_email_email">Please enter a valid email address!</label>
+			<label index="error_message_required">Please enter a message!</label>
+                        <label index="error_subject_required">Please enter a subject!</label>
+                                    
+                        <label index="captcha">Captcha - SPAM Protection</label>
+            		<label index="error_freecapfield_required">Please enter the Captcha!</label>
+            		<label index="error_freecapfield_srFreecap">The entered value doesn't equal the generated Captcha code!</label>
+		</languageKey>
+	</data>
+</T3locallang>

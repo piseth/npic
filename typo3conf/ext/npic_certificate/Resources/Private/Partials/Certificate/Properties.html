@@ -1,0 +1,81 @@
+
+<f:if condition="{hasImage}">
+    <f:then>
+    
+        <div class="post-image">
+            <div class="owl-carousel" data-plugin-options='{"items":1}'>
+            	<f:if condition="{certificate.certificateBachelor}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateBachelor.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                        </div>
+                    </div>
+				</f:if>
+				<f:if condition="{certificate.certificateBachelorTemp}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateBachelorTemp.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                        </div>
+                    </div>
+				</f:if>
+				<f:if condition="{certificate.certificateAssociate}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateAssociate.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                        </div>
+                    </div>
+				</f:if>
+				<f:if condition="{certificate.certificateAssociateTemp}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateAssociateTemp.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                        </div>
+                    </div>
+				</f:if>
+            	<f:if condition="{certificate.certificateFoundation}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateFoundation.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                        </div>
+                    </div>
+				</f:if>
+				<f:if condition="{certificate.transcript}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.transcript.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                            
+                        </div>
+                    </div>
+				</f:if>
+				<f:if condition="{certificate.certificateMaster}">
+					<div>
+                        <div class="img-thumbnail">
+                            <f:image class="img-responsive" src="{certificate.certificateMaster.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                            <f:image src="" width="200"/>
+                        </div>
+                    </div>
+				</f:if>
+                <f:if condition="{certificate.certficateMasterTemp}">
+                    <div>
+                        <div class="img-thumbnail">
+                            
+                            <f:image class="img-responsive" src="{certificate.certficateMasterTemp.originalResource.publicUrl}" alt="{certificate.nameKhmer}" />
+                            
+                        </div>
+                    </div>
+				</f:if>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="post-image">
+            <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                <div>
+                    <div class="img-thumbnail">
+                        <img class="img-responsive" src="typo3conf/ext/typo3_template/Resources/Public/img/blog/blog-image-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:else>
+</f:if>

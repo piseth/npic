@@ -1,0 +1,63 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="feature" icon="{v:extension.path.resources(path: 'Icons/icon-carousel.gif')}">
+		<flux:field.input name="settings.feature.id" default="{v:random.string(length: 8)}" />
+		<flux:form.sheet name="elements">
+			<flux:form.section name="elements">
+				<flux:form.object name="text">
+                    			<flux:field.input name="icon" default="fa-group" />
+					<flux:field.input name="title" />
+					<flux:field.input name="target">
+		                        	<flux:wizard.link />
+		                    	</flux:field.input>
+					<flux:field.text name="text" enableRichText="False" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <p>Feature List</p>
+	<p>Elements: {elements -> f:count()}</p>
+</f:section>
+
+
+<f:section name="Main">
+	<div id="{settings.feature.id}" class="row">
+		<div class="col-md-12">
+			<f:for each="{elements}" as="element" iteration="iteration">
+                <f:for each="{element}" key="elementType" as="elementData">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                            <i class="fa {elementData.icon}"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="shorter">
+                                <f:if condition="{elementData.target -> v:math.round()} > 0">
+                                    <f:then>
+                                        <f:link.page pageUid="{elementData.target}" title="{elementData.title}">
+                                            {elementData.title}
+                                        </f:link.page>
+                                    </f:then>
+                                    <f:else>
+                                        {elementData.title}
+                                    </f:else>
+                                </f:if>
+                            </h4>
+                            <p class="tall">{elementData.text}</p>
+                        </div>
+                    </div>
+                </f:for>
+			</f:for>
+		</div>
+	</div>
+</f:section>
+</div>

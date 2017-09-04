@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:sr_freecap/Configuration/TypoScript/setup.txt">

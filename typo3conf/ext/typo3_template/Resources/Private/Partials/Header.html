@@ -1,0 +1,42 @@
+<header id="header">
+        <div class="container">
+                <div class="logo">
+                        <a href="/">
+                                <img alt="National Polytechnic Institute of Cambodia" width="402" height="124" src="typo3conf/ext/typo3_template/Resources/Public/img/logo.png" data-sticky-width="210" data-sticky-height="65"/>
+                        </a>
+                </div>
+            <!--
+                <div class="search">
+                        <form method="get" action="page-search-results.html" id="searchForm" novalidate="novalidate">
+                                <div class="input-group">
+                                        <input type="text" required="" placeholder="Search..." id="q" name="q" class="form-control search" aria-required="true">
+                                        <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                        </span>
+                                </div>
+                        </form>
+                </div>
+            -->
+                <nav>
+                        
+                        <ul class="nav nav-pills nav-top">
+                                <f:cObject typoscriptObjectPath="lib.meta.navigation"/>
+                                <f:cObject typoscriptObjectPath="lib.meta.link"/>
+                        </ul>
+                </nav>
+                <button data-target=".nav-main-collapse" data-toggle="collapse" class="btn btn-responsive-nav btn-inverse">
+                        <i class="fa fa-bars"></i>
+                </button>
+        </div>
+        <div class="navbar-collapse nav-main-collapse collapse">
+                <div class="container">
+                        <ul class="social-icons">
+                                <!--<li class="facebook"><a title="National Polytechnic Institute of Cambodia" target="_blank" href="http://www.facebook.com/npic.edu.kh">Facebook</a></li>-->
+                                <!--<li class="twitter"><a title="National Polytechnic Institute of Cambodia" target="_blank" href="http://www.twitter.com/npicinfo">Twitter</a></li>-->
+                        </ul>
+                        <nav class="nav-main mega-menu">
+                            <f:cObject typoscriptObjectPath="lib.menu"/>
+                        </nav>
+                </div>
+        </div>
+</header>

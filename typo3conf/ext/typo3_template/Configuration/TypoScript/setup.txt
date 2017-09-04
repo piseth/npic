@@ -1,0 +1,353 @@
+# Include TS for css_styled_content system extension
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:css_styled_content/static/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:fluidpages/Configuration/TypoScript/setup.txt">
+
+# overwrite other extensions
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:typo3_template/Configuration/TypoScript/Extension/gridelements.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:typo3_template/Configuration/TypoScript/Extension/formhandler.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:typo3_template/Configuration/TypoScript/Extension/news.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:typo3_template/Configuration/TypoScript/Extension/sr_freecap.txt">
+
+# deactivate cache when you logged in
+[globalVar = TSFE : beUserLogin > 0]
+    config.no_cache = 1
+    config.debug = 1
+[global]
+# http://caso-germany.com/typo3conf/ext/kjd_site/Configuration/TypoScript/Frontend/general.txt
+config {
+  # seo urls
+  ########## SEO-URLs ##########
+  baseURL = {$NPIC.baseURL}
+  simulateStaticDocuments = 0
+  tx_realurl_enable = 1
+  
+  # cache settings
+  #sendCacheHeaders = 1
+  #cache_period = 86400
+  #cache_clearAtMidnight = 1
+
+  # Protect mail addresses from spamming
+  spamProtectEmailAddresses = -3
+  spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>
+
+  #disableImgBorderAttr = 1
+
+  concatenateCss = 1
+  compressCss = 1
+  concatenateJs = 0
+  compressJs = 0
+  removeDefaultJS = 1
+}
+
+plugin.tx_typo3template.view {
+	templateRootPath = EXT:typo3_template/Resources/Private/Templates/
+	partialRootPath = EXT:typo3_template/Resources/Private/Partials/
+	layoutRootPath = EXT:typo3_template/Resources/Private/Layouts/
+}
+
+page.meta.description = Founded in 2005, with 27 million USD, National Polytechnic Institute of Cambodia, under the Ministry of Labour and Vocational Training of cambodia, is a nation-wide well-known university and the chosen one to be the center for vocational training and higher education in Cambodia.
+page.meta.keywords = Cambodia, NPIC, NPIC Cambodia, Khmer NPIC, Cambodian Institute, NPIC, National Institute Cambodia, National Polytechnic Cambodia
+page.meta.author = NPIC
+page.meta.viewport = width=device-width, initial-scale=1.0
+
+page {
+    includeCSS {
+	webfont1 = http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light
+	webfont1.external = 1
+        rte = typo3conf/ext/typo3_template/Resources/Public/css/rte-frontend.css
+        bootstrap = typo3conf/ext/typo3_template/Resources/Public/vendor/bootstrap/bootstrap.css
+        font-awesome = typo3conf/ext/typo3_template/Resources/Public/vendor/fontawesome/css/font-awesome.css
+        carousel = typo3conf/ext/typo3_template/Resources/Public/vendor/owlcarousel/owl.carousel.css
+        owl-theme = typo3conf/ext/typo3_template/Resources/Public/vendor/owlcarousel/owl.theme.css
+        magnific-popup = typo3conf/ext/typo3_template/Resources/Public/vendor/magnific-popup/magnific-popup.css
+        theme = typo3conf/ext/typo3_template/Resources/Public/css/theme.css
+        theme-elements = typo3conf/ext/typo3_template/Resources/Public/css/theme-elements.css
+        theme-blog = typo3conf/ext/typo3_template/Resources/Public/css/theme-blog.css
+        theme-shop = typo3conf/ext/typo3_template/Resources/Public/css/theme-shop.css
+        theme-animate = typo3conf/ext/typo3_template/Resources/Public/css/theme-animate.css
+        rs-plugin = typo3conf/ext/typo3_template/Resources/Public/vendor/rs-plugin/css/settings.css
+        component = typo3conf/ext/typo3_template/Resources/Public/vendor/circle-flip-slideshow/css/component.css
+        default = typo3conf/ext/typo3_template/Resources/Public/css/skins/default.css
+        custom = typo3conf/ext/typo3_template/Resources/Public/css/custom.css
+        custom{
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+    }
+    includeJSlibs {
+        jQuery = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery/jquery.js
+        jQuery {
+            excludeFromConcatenation = 1
+        }
+        modernizr = typo3conf/ext/typo3_template/Resources/Public/vendor/modernizr/modernizr.js
+        googleMap = https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC4j_MipHxv_-r3A4A4mHqQRRYvBq0ovsI
+        googleMap {
+            external = 1
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        infobox = typo3conf/ext/typo3_template/Resources/Public/JavaScript/infobox.js
+        infobox {
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+    }
+    includeJSFooterlibs {
+        jquery-appear = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.appear/jquery.appear.js
+        jquery-easing = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.easing/jquery.easing.js
+        jquery-cookie = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery-cookie/jquery-cookie.js
+        bootstrap = typo3conf/ext/typo3_template/Resources/Public/vendor/bootstrap/bootstrap.js
+        common = typo3conf/ext/typo3_template/Resources/Public/vendor/common/common.js
+        jquery-validation = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.validation/jquery.validation.js
+        # background landing #
+        # jquery-stellar = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.stellar/jquery.stellar.js
+        # jquery-easy-pie-chart = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js
+        # jquery-gmap = typo3conf/ext/typo3_template/Resources/Public/vendor/jquery.gmap/jquery.gmap.js
+        # twitter = typo3conf/ext/typo3_template/Resources/Public/vendor/twitterjs/twitter.js
+        # filter javascript #
+        # jquery-isotope = typo3conf/ext/typo3_template/Resources/Public/vendor/isotope/jquery.isotope.js
+        owl-carousel = typo3conf/ext/typo3_template/Resources/Public/vendor/owlcarousel/owl.carousel.js
+        # jflickrfeed = typo3conf/ext/typo3_template/Resources/Public/vendor/jflickrfeed/jflickrfeed.js
+        # lightbox magnific #
+        # jquery-magnific-popup = typo3conf/ext/typo3_template/Resources/Public/vendor/magnific-popup/jquery.magnific-popup.js
+        # video background #
+        # vide = typo3conf/ext/typo3_template/Resources/Public/vendor/vide/vide.js
+        theme = typo3conf/ext/typo3_template/Resources/Public/js/theme.js
+        # jquery-themepunch-tools = typo3conf/ext/typo3_template/Resources/Public/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+        # jquery-themepunch-revolution = typo3conf/ext/typo3_template/Resources/Public/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+        # jquery-flipshow = typo3conf/ext/typo3_template/Resources/Public/vendor/circle-flip-slideshow/js/jquery.flipshow.js
+    }
+    includeJSFooter {
+        home = typo3conf/ext/typo3_template/Resources/Public/js/views/view.home.js
+        general = typo3conf/ext/typo3_template/Resources/Public/JavaScript/General.js
+        general {
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        theme-init = typo3conf/ext/typo3_template/Resources/Public/js/theme.init.js
+    }
+}
+
+page.headerData {
+    10 = TEXT
+    10.value (
+        <link rel="shortcut icon" href="typo3conf/ext/typo3_template/Resources/Public/img/favicon.png"/>
+        <!--[if IE]>
+                <link rel="stylesheet" href="typo3conf/ext/typo3_template/Resources/Public/css/ie.css">
+        <![endif]-->
+
+        <!--[if lte IE 8]>
+                <script src="typo3conf/ext/typo3_template/Resources/Public/vendor/respond/respond.js"></script>
+                <script src="typo3conf/ext/typo3_template/Resources/Public/vendor/excanvas/excanvas.js"></script>
+        <![endif]-->
+    )
+}
+page.footerData {
+    10 = TEXT
+    10.value(
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+        <script type="text/javascript">
+
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-60456032-1']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+
+        </script>
+    )
+}
+
+lib.menu = HMENU
+lib.menu {
+    entryLevel = 0
+    
+
+    1 = TMENU
+    1 {
+        wrap = <ul id="mainMenu" class="nav nav-pills nav-main"> | </ul>
+        noBlur = 1
+        expAll = 1
+        NO = 1
+        NO {
+            ATagTitle.field = title
+            wrapItemAndSub = <li> | </li> |*| <li> | </li> |*| <li> | </li>
+            stdWrap.htmlSpecialChars = 1
+        }
+
+        ACT = 1
+        ACT < .NO
+        ACT {
+            wrapItemAndSub = <li class="active"> | </li> |*| <li class="active"> | </li> |*| <li class="active"> | </li>
+        }
+
+        CUR = 1
+        CUR < .NO
+        CUR {
+            wrapItemAndSub = <li class="active"> | </li> |*| <li class="active"> | </li> |*| <li class="active"> | </li>
+        }
+
+        IFSUB = 1
+        IFSUB < .NO
+        IFSUB.wrapItemAndSub = <li class="dropdown">|</li> |*| <li class="dropdown">|</li> |*| <li class="dropdown"> | </li>
+        IFSUB.ATagParams = class="dropdown-toggle"
+        IFSUB.stdWrap.wrap = |&nbsp;<i class="fa fa-angle-down"></i>
+
+        CURIFSUB < .IFSUB
+        CURIFSUB {
+            wrapItemAndSub = <li class="dropdown active"> | </li> |*| <li class="dropdown active"> | </li> |*| <li class="dropdown active"> | </li>
+        } 
+        ACTIFSUB < .IFSUB
+        ACTIFSUB {
+            wrapItemAndSub = <li class="dropdown active"> | </li> |*| <li class="dropdown active"> | </li> |*| <li class="dropdown active"> | </li>
+        } 
+    }
+    2 = TMENU
+    2 {
+        wrap = <ul class="dropdown-menu">|</ul>
+        expAll = 1
+        noBlur = 1
+        NO = 1
+        NO.wrapItemAndSub = <li>|</li>
+
+        IFSUB = 1
+        IFSUB < .NO
+        IFSUB.wrapItemAndSub = <li class="dropdown-submenu">|</li> |*| <li class="dropdown-submenu">|</li> |*| <li class="dropdown-submenu"> | </li>
+    }
+    3 = TMENU
+    3 {
+        wrap = <ul class="dropdown-menu">|</ul>
+        expAll = 1
+        noBlur = 1
+        NO = 1
+        NO.wrapItemAndSub = <li>|</li>
+    }
+    
+}
+
+lib.meta.navigation = HMENU
+lib.meta.navigation {
+    special = directory
+    special.value = 11
+    entryLevel = 0
+    #wrap = <ul class="nav nav-pills nav-top"> | </ul>
+
+    1 = TMENU
+    1 {
+        NO = 1
+        NO {
+                wrapItemAndSub = <li> | </li>
+                stdWrap.htmlSpecialChars = 1
+                stdWrap.wrap = <i class="fa fa-angle-right"></i>|
+        }
+    }
+}
+lib.meta.link = TEXT
+lib.meta.link.value(
+	<li><a href="http://www.facebook.com/npic.edu.kh" target="_blank"><i class="fa fa-angle-right"></i>FACEBOOK</a></li>
+	<li><a href="https://hk2.myserverhosts.com:2096" target="_blank"><i class="fa fa-angle-right"></i>WEBMAIL</a></li>
+)
+
+lib.footer.navigation = HMENU
+lib.footer.navigation {
+    special = directory
+    special.value = {$contentpage.footerPID}
+    entryLevel = 0
+    wrap = <ul> | </ul>
+
+    1 = TMENU
+    1 {
+        NO = 1
+        NO {
+                wrapItemAndSub = <li> | </li>
+                stdWrap.htmlSpecialChars = 1
+        }
+    }
+}
+
+lib.breadcrumb = COA
+lib.breadcrumb {
+    10 = HMENU
+    10 {
+        special = rootline
+        #special.range = 0|-1
+        # "not in menu pages" should show up in the breadcrumbs menu
+        includeNotInMenu = 1
+        1 = TMENU
+        1 {
+            noBlur = 1
+            # Current item should be unlinked
+            target = _self
+            wrap = <ul class="breadcrumb"> | </ul>
+            NO {
+                stdWrap.field = title
+                ATagTitle.field = nav_title // title
+                linkWrap = <li>|</li> |*| <li>|</li> |*| <li>|</li>
+            }
+            # Current menu item is unlinked
+            CUR < .NO
+            CUR = 1
+            CUR.doNotLinkIt = 1
+        }
+    }
+}
+
+# Enable active state for homepage when we are on the root page
+#[globalVar = TSFE:id = 1]
+#	lib.menu.alwaysActivePIDlist = 2
+#[end]
+
+lib.pageTitle = TEXT
+lib.pageTitle.data = page : title
+
+#Project Name
+lib.title = TEXT
+lib.title.value = NPIC
+
+lib.phone = TEXT
+lib.phone.value = 
+
+# footer content
+lib.footer = COA
+
+lib.footer.10 < styles.content.getLeft
+lib.footer.10.select.pidInList = {$contentpage.footerPID}
+lib.footer.10.stdWrap.wrap = <div class="col-md-3">|</div>
+
+lib.footer.20 < styles.content.get
+lib.footer.20.select.pidInList = {$contentpage.footerPID}
+lib.footer.20.stdWrap.wrap = <div class="col-md-3">|</div>
+
+lib.footer.30 < styles.content.getRight
+lib.footer.30.select.pidInList = {$contentpage.footerPID}
+lib.footer.30.stdWrap.wrap = <div class="col-md-3">|</div>
+
+lib.footer.40 < styles.content.getBorder
+lib.footer.40.select.pidInList = {$contentpage.footerPID}
+lib.footer.40.stdWrap.wrap = <div class="col-md-3">|</div>
+
+# Footer
+
+lib.footer.copyright = TEXT
+lib.footer.copyright.data = date:U
+lib.footer.copyright.strftime = %Y
+lib.footer.copyright.wrap = <p>&copy; Copyright 2005-|. National Polytechnic Institute of Cambodia. All right reserved</p>
+
+# TS Template
+tt_content.stdWrap.innerWrap.cObject = CASE
+tt_content.stdWrap.innerWrap.cObject {
+    key.field = section_frame
+    101 = TEXT
+    101.value = <div class="lead">|</div>
+    
+    102 = TEXT
+    102.value = <div class="visible-xs visible-sm">|</div>
+
+    103 = TEXT
+    103.value = <div class="hidden-xs hidden-sm">|</div>
+}
+tt_content.image.20.maxW = 1170

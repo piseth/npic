@@ -1,0 +1,15 @@
+
+plugin.tx_npiccertificate {
+	view {
+		# cat=plugin.tx_npiccertificate/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:npic_certificate/Resources/Private/Templates/
+		# cat=plugin.tx_npiccertificate/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:npic_certificate/Resources/Private/Partials/
+		# cat=plugin.tx_npiccertificate/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:npic_certificate/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_npiccertificate//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

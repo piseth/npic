@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-03T21:26:54Z" product-name="npic_certificate">
+		<header/>
+		<body>
+			<trans-unit id="name_english.description">
+				<source>nameEnglish</source>
+			</trans-unit>
+			<trans-unit id="name_khmer.description">
+				<source>nameKhmer</source>
+			</trans-unit>
+			<trans-unit id="certificate_id.description">
+				<source>certificateId</source>
+			</trans-unit>
+			<trans-unit id="student_id.description">
+				<source>studentId</source>
+			</trans-unit>
+			<trans-unit id="exam_date.description">
+				<source>examDate</source>
+			</trans-unit>
+			<trans-unit id="major.description">
+				<source>major</source>
+			</trans-unit>
+			<trans-unit id="certificate_bachelor.description">
+				<source>certificateBachelor</source>
+			</trans-unit>
+			<trans-unit id="certificate_bachelor_temp.description">
+				<source>certificateBachelorTemp</source>
+			</trans-unit>
+			<trans-unit id="certificate_associate.description">
+				<source>certificateAssociate</source>
+			</trans-unit>
+			<trans-unit id="certificate_associate_temp.description">
+				<source>certificateAssociateTemp</source>
+			</trans-unit>
+			<trans-unit id="certificate_foundation.description">
+				<source>certificateFoundation</source>
+			</trans-unit>
+			<trans-unit id="transcript.description">
+				<source>transcript</source>
+			</trans-unit>
+			<trans-unit id="dob.description">
+				<source>dob</source>
+			</trans-unit>
+			<trans-unit id="photo.description">
+				<source>photo</source>
+			</trans-unit>
+			<trans-unit id="pob.description">
+				<source>pob</source>
+			</trans-unit>
+			<trans-unit id="certificate_master.description">
+				<source>certificateMaster</source>
+			</trans-unit>
+			<trans-unit id="certficate_master_temp.description">
+				<source>certficateMasterTemp</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

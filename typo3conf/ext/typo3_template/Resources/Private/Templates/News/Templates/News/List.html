@@ -1,0 +1,101 @@
+{namespace n=Tx_News_ViewHelpers}
+{namespace paginate=FluidTYPO3\Typo3Template\ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<f:if condition="{news}">
+		<f:then>
+            <!---->
+            <f:if condition="{settings.templateLayout} == 101">
+                <f:then>
+                    <div class="recent-posts push-bottom">
+                        <div class="row">
+                            <div class="owl-carousel" data-plugin-options='{"items": 1, "autoHeight": true}'>
+                                <f:for each="{news}" as="newsItem" iteration="fooIterator">
+                                    <f:if condition="{fooIterator.cycle} % 2">
+                                        <f:then>
+                                            <div>
+                                            <div class="col-md-6">
+                                                <article>
+                                                    <div class="date">
+                                                        <span class="day"><n:format.date format="%d">{newsItem.datetime}</n:format.date></span>
+                                                        <span class="month"><n:format.date format="%B">{newsItem.datetime}</n:format.date></span>
+                                                    </div>
+                                                    <h4>
+                                                        <n:link newsItem="{newsItem}" settings="{settings}">
+                                                            {newsItem.title}
+                                                        </n:link>
+                                                    </h4>
+                                                    <f:if condition="{newsItem.teaser}">
+                                                        <f:then>
+                                                            <f:format.html><f:format.crop append='&nbsp;...&nbsp;<n:link class="read-more" newsItem="{newsItem}" settings="{settings}">read more <i class="fa fa-angle-right"></i></n:link>' maxCharacters="180" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:format.html><f:format.crop append='&nbsp;...&nbsp;<n:link class="read-more" newsItem="{newsItem}" settings="{settings}">read more <i class="fa fa-angle-right"></i></n:link>' maxCharacters="180" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+                                                        </f:else>
+                                                    </f:if>
+                                                </article>
+                                            </div>
+                                                {f:if(condition: fooIterator.isLast, then: '</div>')}
+                                        </f:then>
+                                        <f:else>
+                                            <div class="col-md-6">
+                                                <article>
+                                                    <div class="date">
+                                                        <span class="day"><n:format.date format="%d">{newsItem.datetime}</n:format.date></span>
+                                                        <span class="month"><n:format.date format="%B">{newsItem.datetime}</n:format.date></span>
+                                                    </div>
+                                                    <h4>
+                                                        <n:link newsItem="{newsItem}" settings="{settings}">
+                                                            {newsItem.title}
+                                                        </n:link>
+                                                    </h4>
+                                                    <f:if condition="{newsItem.teaser}">
+                                                        <f:then>
+                                                            <f:format.html><f:format.crop append='&nbsp;...&nbsp;<n:link class="read-more" newsItem="{newsItem}" settings="{settings}">read more <i class="fa fa-angle-right"></i></n:link>' maxCharacters="180" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:format.html><f:format.crop append='&nbsp;...&nbsp;<n:link class="read-more" newsItem="{newsItem}" settings="{settings}">read more <i class="fa fa-angle-right"></i></n:link>' maxCharacters="180" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+                                                        </f:else>
+                                                    </f:if>
+                                                </article>
+                                            </div>
+                                            </div>
+                                        </f:else>
+                                    </f:if>
+                                </f:for>
+                            </div>
+                        </div>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="blog-posts">
+                        <f:if condition="{settings.hidePagination}">
+                            <f:then>
+                                <f:for each="{news}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:then>
+                            <f:else>
+                                <paginate:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+                                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                        <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </paginate:widget.paginate>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:else>
+            </f:if>
+		</f:then>
+		<f:else>
+			<div class="blog-posts">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+</f:section>

@@ -1,0 +1,48 @@
+<f:layout name="Default" />
+<f:section name="main">
+	<h1>Search Student's Certificate</h1>
+
+	<f:flashMessages renderMode="div" />
+	<div class="row">
+		<div class="col-md-4">
+			<f:form class="form-inline" pageUid="{pluginPid}" action="list" name="query" method="post">
+				<div class="form-group">
+					<f:form.textfield class="form-control" property="string" value="{key}" />
+				</div>
+				<f:form.submit value="Search" class="btn btn-default" name="submit" />
+			</f:form>
+		</div>
+		<div class="col-md-8"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<f:if condition="{certificates}">
+				<f:then>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Student Name</th>
+								<th>Certificate</th>
+							</tr>
+						</thead>
+						<tbody>
+							<f:for each="{certificates}" as="certificate">
+								<tr>
+									<td><f:link.action action="show"
+											arguments="{certificate : certificate}"> {certificate.nameKhmer} | {certificate.nameEnglish}</f:link.action></td>
+									<td><f:link.action action="show"
+											arguments="{certificate : certificate}"> Certificate</f:link.action></td>
+								</tr>
+							</f:for>
+						</tbody>
+					</table>
+				</f:then>
+				<f:else>
+					<f:if condition="{isSearch}">
+						<div class="text-danger">There is no record!</div>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+</f:section>

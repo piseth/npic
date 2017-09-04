@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-03T21:26:54Z" product-name="npic_certificate">
+		<header/>
+		<body>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate">
+				<source>Certificate</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.name_english">
+				<source>Name English</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.name_khmer">
+				<source>Name Khmer</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_id">
+				<source>Certificate Id</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.student_id">
+				<source>Student Id</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.exam_date">
+				<source>Exam Date</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.major">
+				<source>Major</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_bachelor">
+				<source>Certificate Bachelor</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_bachelor_temp">
+				<source>Certificate Bachelor Temp</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_associate">
+				<source>Certificate Associate</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_associate_temp">
+				<source>Certificate Associate Temp</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_foundation">
+				<source>Certificate Foundation</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.transcript">
+				<source>Transcript</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.dob">
+				<source>Dob</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.photo">
+				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.pob">
+				<source>Pob</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certificate_master">
+				<source>Certificate Master</source>
+			</trans-unit>
+			<trans-unit id="tx_npiccertificate_domain_model_certificate.certficate_master_temp">
+				<source>Certficate Master Temp</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

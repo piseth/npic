@@ -1,0 +1,102 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="map" icon="{v:extension.path.resources(path: 'Icons/icon-carousel.gif')}">
+		<flux:field.input name="settings.map.id" default="{v:random.string(length: 8)}" />
+		<flux:field.input name="latitude" default="11.599336" />
+        <flux:field.input name="longitude" default="104.800826" />
+        <flux:field.input name="title" />
+        <flux:field.text name="content" enableRichText="False" />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <p>Single map: {title}</p>
+	<p>Latitude: {latitude}</p>
+    <p>Longitude: {longitude}</p>
+</f:section>
+
+
+<f:section name="Main">
+	<div id="we_map_canvas" data-content="{content}" style="width: 100%; height: 230px"></div>
+    <script type="text/javascript">
+        var initLat = '{latitude}';
+        var content = $('#we_map_canvas').attr('data-content');
+        var initLon = '{longitude}';
+        var title = '{title}';
+        var isOpen = true;
+        var initZoom = 13;
+        function initializeWorldMap() {
+            var centerLatLng = new google.maps.LatLng(initLat, initLon);
+            var myOptions = {
+                zoom: initZoom,
+                draggable: true,
+                disableDefaultUI: false,
+                center: centerLatLng,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoomControlOptions: {
+                    style:google.maps.ZoomControlStyle.LARGE
+                },
+                mapTypeControl: true
+            };
+
+            var maps = new google.maps.Map(document.getElementById("we_map_canvas"), myOptions);
+
+            var marker = new google.maps.Marker({
+                map: maps,
+                icon: 'http://maps.google.com/mapfiles/marker.png',
+                draggable: false,
+                position: new google.maps.LatLng(initLat, initLon),
+                visible: true
+            });
+			var myOptions = {
+                    disableAutoPan: false
+                    ,maxWidth: 0
+                    // set the position of map
+                    ,pixelOffset: new google.maps.Size(-100,-202)
+                    ,zIndex: null
+                    ,boxStyle: { 
+                     //background: "url('http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif') no-repeat"
+                     opacity: 0.85
+                    }
+                    ,closeBoxMargin: "11px 27px -10px 0px"
+                    //,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+                    ,closeBoxURL: ""
+                    ,infoBoxClearance: new google.maps.Size(1, 1)
+                    ,isHidden: false
+                    ,pane: "floatPane"
+                    ,enableEventPropagation: false
+                };
+            var infoBox = new InfoBox(myOptions);
+
+
+            var boxText = document.createElement("div");
+            boxText.style.cssText = "height:150px;width:200px; margin-top: 18px; background: white; padding: 5px; position: relative;";
+            boxText.innerHTML = "<h5>" + title + "</h5>" + content;
+            infoBox.setContent(boxText);
+
+            google.maps.event.addListener(marker, "click", function (e) {
+                
+                if (isOpen) {
+                    infoBox.close();
+                    isOpen = false;
+                } else {
+                    infoBox.open(maps, this);
+                    isOpen = true;
+                }
+                
+            });
+            infoBox.open(maps, marker);
+            
+        }
+        initializeWorldMap();
+    </script>
+</f:section>
+</div>

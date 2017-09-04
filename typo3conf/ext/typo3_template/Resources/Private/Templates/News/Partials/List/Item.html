@@ -1,0 +1,97 @@
+{namespace n=Tx_News_ViewHelpers}
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+
+
+<article class="post post-medium">
+    <div class="row">
+        <f:if condition="{newsItem.falMedia}">
+            <!-- media preview element -->
+            <f:then>
+                <div class="col-md-5">
+                    <div class="post-image">
+                        <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                            <f:for each="{newsItem.falMedia}" as="media">
+                                <div>
+                                    <div class="img-thumbnail">
+                                        <img class="img-responsive" src="{settings.fileFolder}{media.originalResource.originalFile.identifier}" alt="{media.originalResource.originalFile.name}">
+                                    </div>
+                                </div>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <f:if condition="{settings.displayDummyIfNoMedia}">
+                    <f:then>
+                        <div class="col-md-5">
+                            <div class="post-image">
+                                <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                                    <div>
+                                        <div class="img-thumbnail">
+                                            <img class="img-responsive" src="typo3conf/ext/typo3_template/Resources/Public/img/blog/blog-image-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:then>
+                </f:if>
+            </f:else>
+        </f:if>
+        <div class="col-md-7">
+            <div class="post-content">
+                <h2>
+                    <n:link newsItem="{newsItem}" settings="{settings}">
+                        {newsItem.title}
+                    </n:link>
+                </h2>
+                <f:if condition="{newsItem.teaser}">
+                    <f:then>
+                        <f:format.html><f:format.crop append="&nbsp;[...]" maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+                    </f:then>
+                    <f:else>
+                        <f:format.html><f:format.crop append="&nbsp;[...]" maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+                    </f:else>
+                </f:if>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post-meta">
+                <!-- date -->
+                <span>
+                    <i class="fa fa-calendar"></i> 
+                    <n:format.date format="%B %d, %Y">{newsItem.datetime}</n:format.date> 
+                </span>
+                <!-- author -->
+                <f:if condition="{newsItem.author}">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        By <f:translate key="author" arguments="{0:newsItem.author}" /> 
+                    </span>
+                </f:if>
+                <f:if condition="{newsItem.firstCategory}">
+                    <!-- first category -->
+                    <span><i class="fa fa-tag"></i> 
+                        {newsItem.firstCategory.title}
+                    </span>
+                </f:if>
+                <f:if condition="{newsItem.tags}">
+                    <span><i class="fa fa-tags"></i> 
+                        <f:for each="{newsItem.tags}" as="tag">
+                            {tag.title}&nbsp;
+                        </f:for>
+                    </span>
+                </f:if>
+                <n:link class="btn btn-xs btn-primary pull-right" newsItem="{newsItem}" settings="{settings}">
+                    Read more...
+                </n:link>
+            </div>
+        </div>
+    </div>
+</article>
