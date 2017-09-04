@@ -23,6 +23,8 @@
 /typo3temp/*
 !/typo3temp/.keep
 
+/dev/
+/cgi-bin/
 /mechanic/
 /rnd.npic.edu.kh/
 /typo3.zip
