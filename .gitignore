@@ -3,6 +3,8 @@
 /fileadmin/user_upload/
 /fileadmin/_temp_/
 /fileadmin/_processed_/
+/fileadmin/*
+!/fileadmin/.keep
 #/uploads/tx_*
 #/uploads/
 
@@ -23,6 +25,7 @@
 /typo3temp/*
 !/typo3temp/.keep
 
+/back_up/
 /dev/
 /cgi-bin/
 /mechanic/
