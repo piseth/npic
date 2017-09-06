@@ -559,7 +559,7 @@ return array (
       array (
       ),
     ),
-    'realurl' => 
+    /*'realurl' => 
     array (
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/realurl/',
@@ -567,7 +567,7 @@ return array (
       'suggestions' => 
       array (
       ),
-    ),
+    ),*/
     'npic_certificate' => 
     array (
       'state' => 'active',
