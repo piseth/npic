@@ -559,15 +559,17 @@ return array (
       array (
       ),
     ),
-    /*'realurl' => 
+    'realurl' => 
     array (
+      'manifestPath' => '',
+      'composerName' => 'dmitryd/typo3-realurl',
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/realurl/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (
       ),
-    ),*/
+    ),
     'npic_certificate' => 
     array (
       'state' => 'active',
@@ -755,6 +757,15 @@ return array (
     array (
       'state' => 'inactive',
       'packagePath' => 'typo3conf/ext/crawler/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'extension_builder' => 
+    array (
+      'state' => 'inactive',
+      'packagePath' => 'typo3conf/ext/extension_builder/',
       'classesPath' => 'Classes/',
       'suggestions' => 
       array (

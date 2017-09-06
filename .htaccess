@@ -122,6 +122,7 @@ RewriteRule ^(typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/|favicon\.ico) - [
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule (\.html|/)$ /index.php
 
 # Main URL rewriting.
 # For httpd.conf, use this line instead of the next one:

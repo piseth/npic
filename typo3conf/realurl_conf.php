@@ -1,4 +1,5 @@
 <?php
+
 $rootPids = array(
 		'www.npic.edu.kh' => 1,
 		'npic.edu.kh' => 1,
@@ -32,7 +33,94 @@ $defaultConf = array(
 		'expireDays' => '7',
 		'rootpage_id' => $rootPids[$host],
 		'error404_id' => '51'
-	)
+	),
+
+       'fixedPostVars' => array(
+		'newsDetailConfiguration' => array(
+			array(
+				'GETvar' => 'tx_news_pi1[news]',
+				'lookUpTable' => array(
+					'table' => 'tx_news_domain_model_news',
+					'id_field' => 'uid',
+					'alias_field' => 'title',
+					'addWhereClause' => ' AND NOT deleted',
+					'useUniqueCache' => 1,
+					'useUniqueCache_conf' => array(
+						'strtolower' => 1,
+						'spaceCharacter' => '-'
+					),
+					'autoUpdate' => 1,
+					'expireDays' => 180,
+				)
+			)
+		),
+		'19' => 'newsDetailConfiguration'
+	),
+
+
+'postVarSets' => array(
+	'_DEFAULT' => array(
+		'news' => array(
+			array(
+				'GETvar' => 'tx_news_pi1[controller]',
+				'valueMap' => array(
+					'news' => 'News',
+				)
+			),
+			array(
+				'GETvar' => 'tx_news_pi1[action]',
+			),
+			array(
+				'GETvar' => 'tx_news_pi1[news]',
+				'lookUpTable' => array(
+					'table' => 'tx_news_domain_model_news',
+					'id_field' => 'uid',
+					'alias_field' => 'title',
+					'useUniqueCache' => 1,
+					'useUniqueCache_conf' => array(
+						'strtolower' => 1,
+						'spaceCharacter' => '-',
+					),
+				),
+			),
+		),
+	),
+),
+
+	'fileName' => array(
+		'defaultToHTMLsuffixOnPrev' => 0,
+		'index' => array(
+			'rss.xml' => array(
+				'keyValues' => array(
+					'type' => '100'
+				)
+			),
+			'print' => array(
+				'keyValues' => array(
+					'type' => 98,
+				)
+			),
+			// tqSeoSitemapXml
+			'sitemap.xml' => array(
+				'keyValues' => array(
+					'type' => 841132,
+				),
+			),
+			// tqSeoSitemapTxt
+			'sitemap.txt' => array(
+				'keyValues' => array(
+					'type' => 841131,
+				),
+			),
+			// tqSeoRobotsTxt
+			'robots.txt' => array(
+				'keyValues' => array(
+					'type' => 841133,
+				),
+			),
+		)
+	),
+
 );
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
